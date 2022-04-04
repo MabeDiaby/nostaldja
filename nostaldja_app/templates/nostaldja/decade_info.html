@@ -1,0 +1,13 @@
+<h2>{{ decade.start_year }} <a href="">(edit)</a></h2>
+<h4>{{ decade.start_year }}</h4>
+
+<img src="{{ decade.photo_url }}" alt="" class="decade-photo" />
+
+<h3>fads <a href="">(+)</a></h3>
+<ul>
+  {% for fad in decade.fads.all %}
+  <li>
+    <a href="">{{ fad.decade }}--{{ fad.name }}-{{ fad.description }}</a>
+  </li>
+  {% endfor %}
+</ul>
